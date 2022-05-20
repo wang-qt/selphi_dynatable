@@ -54,7 +54,10 @@ end
 本教程需要 user表和posts表。如果user表不存在
 
 ```shell
-mix phx.gen.auth
+mix phx.gen.auth Accounts User     users
+
+mix deps.get
+
 ```
 
 创建user migration，table和mvc各种资源
@@ -63,6 +66,7 @@ mix phx.gen.auth
 
 ```
 mix phx.gen.html  Posts  Post  posts  title:string  content:text  cover:string    read_count:integer  rating:float  price:float   user_id:integer   is_lock:integer is_online:integer
+
 ```
 
 创建post mvc资源
